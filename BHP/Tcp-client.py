@@ -1,6 +1,6 @@
 import socket
 
-target_host = '10.10.241.145'
+target_host = 'www.google.com'
 target_port = 80
 
 # Socket object. Used to establish a connection to the target, allowing us to send and receive data.
@@ -10,7 +10,7 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((target_host, target_port))
 
 # Send some data. Essential for communication between the client and server.
-client.send(b'GET / HTTP/1.1\r\nHost:10.10.241.145\r\n\r\n')
+client.send(b'GET / HTTP/1.1\r\nHost:www.google.com\r\n\r\n')
 
 # Receive some data
 response = client.recv(4096)
